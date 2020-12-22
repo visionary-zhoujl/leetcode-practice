@@ -8,7 +8,7 @@ public class LongestCommonPrefix {
 
     public static String solution(String[] strs){
 
-        String result = null;
+        String result = "";
         if (strs!=null&&strs.length>0){
             result = strs[0];
             for (int i = 1;i<strs.length;i++){
