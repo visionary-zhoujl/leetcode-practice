@@ -13,8 +13,8 @@ public class LongestCommonPrefix {
             result = strs[0];
             for (int i = 1;i<strs.length;i++){
                 result = getLongestCommonPrefix(result,strs[i]);
-                if (result=""){
-
+                if (result==""){
+                    break;
                 }
             }
         }
