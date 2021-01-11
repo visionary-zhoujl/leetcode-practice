@@ -29,7 +29,7 @@ public class Fib {
         }
         Map<Integer, BigDecimal> cache = new HashMap<>();
         cache.put(0,new BigDecimal(0));cache.put(1,new BigDecimal(1));
-        BigDecimal result = getByCache(95,cache);
+        BigDecimal result = getByCache(n,cache);
         result = result.remainder(new BigDecimal(1000000007));
         return result.intValue();
 //        return new Long(getByCache(n,cache)%100000007L).intValue();
