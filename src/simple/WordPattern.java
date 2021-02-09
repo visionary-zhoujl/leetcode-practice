@@ -20,15 +20,13 @@ public class WordPattern {
         if (split.length!=pattern.length()){
             return false;
         }
-        Map<Character,String> mapUtil = new HashMap<>();
+        Map<Character,String> mapUtil = new HashMap<>(split.length);
         for (int i =0;i<split.length;i++){
             char temp = pattern.charAt(i);
             if (mapUtil.get(temp)==null&&!mapUtil.containsValue(split[i])){
                 mapUtil.put(temp,split[i]);
             }else{
-                if (mapUtil.get(temp)!=null&&mapUtil.get(temp).equals(split[i])){
-                    continue;
-                }else{
+                if (!(mapUtil.get(temp)!=null&&mapUtil.get(temp).equals(split[i]))){
                     return false;
                 }
             }
